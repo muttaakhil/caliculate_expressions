@@ -20,7 +20,7 @@ function App() {
     const a = parseFloat(input);
     const b = a - 15;
 
-    if (!isNaN(a) && a !== b) {
+    if (a !== b) {
       const expressionResult = ((a + b) / (a - b)) * (a + b);
       setResult(expressionResult.toFixed(2));
     } else {

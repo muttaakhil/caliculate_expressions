@@ -30,28 +30,20 @@ function App() {
 
   const calculateSumOfSquares = () => {
     const num = parseInt(input);
-    if (!isNaN(num)) {
-      let sum = 0;
-      const digits = Math.abs(num).toString();
-      for (let i = 0; i < digits.length; i++) {
-        sum += Math.pow(parseInt(digits[i]), 2);
-      }
-      setSumOfSquares(sum);
-    } else {
-      setSumOfSquares('Invalid input');
+    let sum = 0;
+    const digits = Math.abs(num).toString();
+    for (let i = 0; i < digits.length; i++) {
+      sum += Math.pow(parseInt(digits[i]), 2);
     }
+    setSumOfSquares(sum);
   };
 
   const checkEvenOdd = () => {
     const num = parseInt(input);
-    if (!isNaN(num)) {
-      if (num % 2 === 0) {
-        setEvenOdd('The number is even');
-      } else {
-        setEvenOdd('The number is odd');
-      }
+    if (num % 2 === 0) {
+      setEvenOdd('The number is even');
     } else {
-      setEvenOdd('Invalid input');
+      setEvenOdd('The number is odd');
     }
   };
 
